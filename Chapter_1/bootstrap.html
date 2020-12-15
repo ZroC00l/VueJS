@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--bootstrap CDN-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<div id="app">
+    <div class="container">
+        <form class="mt-5">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" :value="email" class="form-control form-control-lg"><!-- v-model=email directive can also be used. -->
+            </div>
+
+            <button type="submit" v-on:click="process" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script>
+
+        var vm =new Vue({
+            el:'#app',
+            data:{
+                    email: 'giftgabanakgosi@gmail.com'
+            },
+
+            methods:{
+                process: function(event){
+                    event.preventDefault();
+                    alert('Submitted ' + this.email);
+                }
+            }
+            
+        
+        });
+</script>

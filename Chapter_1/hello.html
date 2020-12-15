@@ -1,0 +1,41 @@
+<!-- This example shows how to dynamically change the contents of the H1 tag using just
+simple Javascript and also using JQuery built in library-->
+<!DOCTYPE html>
+
+
+<h1 id="greetings"></h1>
+
+<h2 id="Salutation"></h2>
+
+
+<!-- using Ordinary JavaScript-->
+<script>
+    document.getElementById("greetings").innerText = "Hello from the third world";
+</script> 
+
+<!-- using JQUERY-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+    $('#Salutation').text('Hello world');
+</script>
+
+<!--Using Vue to dynamically change the H1 tag data-->
+
+
+<div id="app">
+
+    <h1>{{greeting}}</h1>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"> </script>
+<script>
+    //create an instance of Vue
+    new Vue({
+        el:'#app',
+        data:{
+            greeting:'Wow this is my first experience with Vue reactivity'
+        }
+    });
+</script>
